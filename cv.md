@@ -45,7 +45,7 @@ Scrum, eXtreme Programming, Agile, Test Driven Development, CI CD, lean managmen
 During school I had the following course: System integration, Large systems / Scalability, Databases, Testing and C family.    
 During school I also got a diploma for being a Learning Assistant in  innovations process “Eksperts in teams” at Business Academy Aarhus.
 
-# Sprogkundskaber 
+# Language competence 
 I speak and write Danish fluently    
 I speak and write English fluently    
 
