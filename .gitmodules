@@ -1,0 +1,3 @@
+[submodule "xpath-diner"]
+	path = xpath-diner
+	url = https://github.com/kiksen1987/xpath-diner
