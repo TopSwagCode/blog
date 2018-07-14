@@ -50,4 +50,4 @@ I speak and write Danish fluently
 I speak and write English fluently    
 
 # Other
-2006-2015 I worked as voluteer at Kidney Association's youth department. During the years my task had grown including going to NNS in Oslo and CEAPIR in Zürich.
+2006-2015 I worked as voluteer at Kidney Association's youth department. During the years my task had grown including going to NNS in Oslo and CEAPIR in Zürich
