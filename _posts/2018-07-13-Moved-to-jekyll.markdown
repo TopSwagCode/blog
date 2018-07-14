@@ -58,7 +58,7 @@ by simply adding some lines to _config.yml
 
 So after using my masterly CSS skills 'cough sarkasme cough'. You have the wonderfull footer you see below today.
 
-The source code and posts of blog can be found [Here.](#)
+The source code and posts of blog can be found [Here.](https://github.com/kiksen1987/blog)
 
 Learn more about [Jekyll.](https://jekyllrb.com/)
 

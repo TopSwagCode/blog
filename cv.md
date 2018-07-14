@@ -4,8 +4,6 @@ title: Curriculum Vitae
 permalink: /cv/
 ---
 
-[Download](#) or read on below:
-
 Name: Joshua Jesper Krægpøth Ryder    
 Adress: Ahornvej 3.    
 ZipCode: 8751    
@@ -36,6 +34,7 @@ Born: 17/02/1987
 * Development of new checkout flow for Punkt1.dk. The old checkout flow had to many step and many customers didn't complete their order. The project was deployed in under a week and result could be seen instantly.
 * Development of Kosan Gas webshop, and associated business logic matrix.
 * Getting Stibo to change to jMeter saving them alot of money and making performance more easy to approach, by persiting in talking about it and making demo's of it in my spare time.
+* Creating a new Microservice overnight in spare time, to implement wished feature that users had asked for, but had not been prioritized. Showing that going over to microservices let us work more agile and create new services without interfering with prior code base. All code and deployment setup complete during one night of coding.  
 
 # Skills
 C#, ASP.NET, Dotnet Core, Docker, MSMQ, SQS, Razor Entity Framework, NHibernate. SQL, Java, HTML5, JavaScript, CSS.
