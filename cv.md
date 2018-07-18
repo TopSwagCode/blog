@@ -37,7 +37,7 @@ Born: 17/02/1987
 * Creating a new Microservice overnight in spare time, to implement wished feature that users had asked for, but had not been prioritized. Showing that going over to microservices let us work more agile and create new services without interfering with prior code base. All code and deployment setup complete during one night of coding.  
 
 # Skills
-C#, ASP.NET, Dotnet Core, Docker, MSMQ, SQS, Razor Entity Framework, NHibernate. SQL, Java, HTML5, JavaScript, CSS.
+C#, ASP.NET, Dotnet Core, Docker, MSMQ, SQS, Razor, Entity Framework, NHibernate. SQL, Java, HTML5, JavaScript, CSS.
 Eclipse Visual Studio Microsoft SQL Server 2005 / 2008 Microsoft Test Manager, TConfig, CTE XL, Jira, Azure, AWS.
 
 # Buzz words    
