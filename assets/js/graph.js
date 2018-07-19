@@ -1,4 +1,3 @@
-// See Es5-chat.js for a Babel transpiled version of the following code:
 
 const connection = new signalR.HubConnectionBuilder()
     .withUrl("http://topswagcodesignalr.azurewebsites.net/graphHub")
