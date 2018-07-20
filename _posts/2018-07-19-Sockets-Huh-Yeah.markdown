@@ -31,7 +31,21 @@ I have implemented a simple chat that can be found <a href="/chat/" target="_bla
 As you can see it is just a chat in it's simplest form. There are plenty of improvements that can be done to make it more fancy. Like adding user to user private chat. This could be implemented bt storing the ConnectionId's on the server side and giving the client a list of active users to pick from, when wanting a private chat. This would ensure other users not receiving the private chat between 2 people. I am sure you allready have plenty of ideas about other cool features that could be added.
 
 ### Show me the Code!
-Woah slow down there. There is plenty of other usecases of using websockets, eg. Gaming. Just be creative and build your own samples :). All my samples was created using Dotnet Core and SignalR. For the graph i used chartJS.
+
+![Show Me The Code!](/assets/showmethecode.jpg)
+
+Woah slow down there. There is plenty of other usecases of using websockets, eg. Gaming, Collaborative editing/coding, Analyze User Behavior(If you feel like stalking your users :P ). Just be creative and build your own samples :). All my samples was created using Dotnet Core and SignalR. For the graph i used chartJS. I would recommend allways getting the latest version of Dotnet Core and AspNetCore. In my project I used Microsoft.AspNetCore.App 2.1.1 and Microsoft.NETCore.App 2.1.0. I also added AWSSDK.SQS 3.3.3.11. Simply because I was playing around with external services sending messages to the websocket service and then the websocket service broadcasting these messages to the clients. As stated before I created a FakeSQSClient using AWS interface letting me easy switching between these. 
+
+In my project I allways try to decouple my code as much as possible. Meaning I rarely use Razor pages or MVC with razor. My code samples were built similar to this:
+
+![SignalR](/assets/signalR.png)
+
+* A processing service that does all the processing. In this case just creating alot of random numbers between 0 and 100. Then putting these messages on a message queue. (Message queue I used was AWS SQS, but could just as well have been RabbitMQ or MSMQ)
+* Websocket service listening on a message queue and broadcasting via websockets. (Using SignalR in dotnet core, but could just as easy have been NodeJS broadcasting messages)
+* Client receiving broadcasts on websockets and displaying data. (Plain old javascript or React / VueJS or whatever floats your boat.)
+
+
+### Come on Show me the Code!!
 
 ```
 /*
@@ -39,7 +53,7 @@ Woah slow down there. There is plenty of other usecases of using websockets, eg.
  * Startup.cs - adding SignalR to your project.
  */
 ```
-Server side code can be found <a href="https://github.com/kiksen1987/TopSwagCode.SignalR" target="_blank">here.</a>
+Server side code can be found <a href="https://github.com/kiksen1987/TopSwagCode.SignalR" target="_blank">here.</a>    
 And the client side code can be found <a href="https://github.com/kiksen1987/blog/tree/master/assets/js" target="_blank">here.</a>
 
 Hoped you liked the blog post and got some nice ideas to improve your projects with WebSockets.
