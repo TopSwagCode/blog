@@ -11,8 +11,8 @@ permalink: /graph/
     <script src="http://www.chartjs.org/dist/2.7.2/Chart.bundle.js"></script> 
 </head>
 <body>
-<div>
-    <canvas id="myChart" width="400" height="400"></canvas>
+<div style="position: relative; height:80vh; width:80vw">
+    <canvas id="myChart"></canvas>
     <script>
         var myData = [12, 19, 3, 5, 2, 3]; // Just dummy data. You can load from your server.
         var ctx = document.getElementById("myChart").getContext('2d');
@@ -38,15 +38,17 @@ permalink: /graph/
         });
 
     </script>
+    <hr />
+    <footer>
+        <p>TopSwagCode - SignalR Graph</p>
+    </footer>
 </div>
+
 <script src="/assets/js/signalr.js"></script>    
 <script src="/assets/js/graph.js"></script>
 
-        <hr />
-        <footer>
-            <p>TopSwagCode - SignalR Graph</p>
-        </footer>
-    </div>
+        
+    
 
     
 </body>

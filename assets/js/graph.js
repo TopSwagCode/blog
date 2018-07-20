@@ -1,4 +1,3 @@
-
 const connection = new signalR.HubConnectionBuilder()
     .withUrl("http://topswagcodesignalr.azurewebsites.net/graphHub")
     .build();
