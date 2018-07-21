@@ -46,13 +46,96 @@ In my project I allways try to decouple my code as much as possible. Meaning I r
 
 
 ### Come on Show me the Code!!
+Well to get started we need to configure Websockets in dotnet core. We do this in the Startup.cs. As extra I will also be adding Cross-origin resource sharing (CORS) policy and my two services I will be using. My setup of Cors will allow any origin, but depending your project and needs you might want something different. I won't go into detailts about CORS, that would be a subject for another blog post. To start out I will configure the services I will be using in the ConfigureServices method as shown below.
 
 ```
-/*
- * Todo: Code samples
- * Startup.cs - adding SignalR to your project.
- */
+        public void ConfigureServices(IServiceCollection services)
+        {
+            services.AddCors(options => options.AddPolicy("CorsPolicy",
+                builder =>
+                {
+                    builder.AllowAnyMethod()
+                        .AllowAnyHeader()
+                        .AllowAnyOrigin()
+                        .AllowCredentials();
+                }));
+
+            services.AddSingleton<IAmazonSQS>(o => new FakeSqsService());
+            services.AddHostedService<TimedHostedService>();
+
+            services.AddSignalR();
+        }
 ```
+Afterwards I will configure the app by createing the Configure method. I will tell the App to use my CORS policy and add all the routes for my websocket project.
+
+```
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        {
+            app.UseCors("CorsPolicy");
+
+            app.UseSignalR(route =>
+            {
+                route.MapHub<ChatHub>("/chathub");
+                route.MapHub<ProcessHub>("/processhub");
+                route.MapHub<GraphHub>("/graphhub");
+            });
+        }
+```
+
+My 3 hubs are really simple and have wery little logic in them. I have created one for each sample. To start with lets look at ChatHub. Ths class only have on method. SendMessage(string user, string message). This method is called from the client with the following javascript:
+
+```
+    const connection = new signalR.HubConnectionBuilder()
+        .withUrl("http://topswagcodesignalr.azurewebsites.net/chatHub")
+        .build();
+
+    document.getElementById("sendButton").addEventListener("click", event => {
+        const user = document.getElementById("userInput").value;
+        const message = document.getElementById("messageInput").value;    
+        connection.invoke("SendMessage", user, message).catch(err => console.error(err)); // Here's the call to the server.
+        event.preventDefault();
+        document.getElementById("messageInput").value = "";
+    });
+```
+This code first creates a connection using SignalR and then fetches the input fields and sends it to the websocket server with the connection.invoke(). The parameters of this method if invoke("Method on server", parameters on server). The server side code which receives this call looks like the following:
+
+```
+    public class ChatHub : Hub
+    {
+        public async Task SendMessage(string user, string message)
+        {
+            await Clients.All.SendAsync("ReceiveMessage", user, message);
+        }
+    }
+```
+
+The server takes the user and the message and broadcasts it out to all connected clients. Telling them to look for ReceiveMessage logic on the client. It looks like the following:
+
+```
+    connection.on("ReceiveMessage", (user, message) => { 
+        const encodedMsg = user + " says: " + message;
+        const li = document.createElement("li");
+        li.textContent = encodedMsg;
+        document.getElementById("messagesList").appendChild(li);
+    });
+```
+Telling the client when connection receives "ReceiveMessage" with 2 parameters. Do the following. In this case just throw all chat in a LI tag and append it to the list.
+
+I won't tell about processing example, since it looks alot like Chat, just to a single user. Instead tell abit about admin / graph example. To start out I will show the code for the hub.
+
+```
+    public class GraphHub : Hub
+    {
+    }
+```
+So empty. It's because choose not to have any logic in here to show how you could call your client's outside the hub. So my GraphHub is only used to register the route and get users connected. But all messages sent to clients come from my TimedHostedService using dependcy injection. The constructor looks like the following:
+
+```
+    public TimedHostedService(ILogger<TimedHostedService> logger, IHubContext<GraphHub> graphHubContext, IAmazonSQS amazonSqs)
+```
+
+So IHubContext<GraphHub> gets injected, so I can send messages to my clients. The TimedHostedService runs in the background every 500ms and fetches messages of a AWS Queue. Then it runs through all these messages and sends them to the clients listening on GraphHub. We could do all kind of cool stuff like summing up or getting averages of all messages before sending it to the clients. You can see all the code or download it on github.
+
 Server side code can be found <a href="https://github.com/kiksen1987/TopSwagCode.SignalR" target="_blank">here.</a>    
 And the client side code can be found <a href="https://github.com/kiksen1987/blog/tree/master/assets/js" target="_blank">here.</a>
 
