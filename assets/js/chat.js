@@ -1,5 +1,5 @@
 const connection = new signalR.HubConnectionBuilder()
-    .withUrl("http://topswagcodesignalr.azurewebsites.net/chatHub")
+    .withUrl("https://topswagcodesignalr.azurewebsites.net/chatHub")
     .build();
 
 connection.on("ReceiveMessage", (user, message) => { 
@@ -18,6 +18,5 @@ document.getElementById("sendButton").addEventListener("click", event => {
     event.preventDefault();
     document.getElementById("messageInput").value = "";
 });
-
 
 connection.start().catch(err => console.error(err));

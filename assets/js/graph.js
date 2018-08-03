@@ -1,5 +1,5 @@
 const connection = new signalR.HubConnectionBuilder()
-    .withUrl("http://topswagcodesignalr.azurewebsites.net/graphHub")
+    .withUrl("https://topswagcodesignalr.azurewebsites.net/graphHub")
     .build();
 
 connection.on("LogWork", (work) => {

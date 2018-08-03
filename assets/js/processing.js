@@ -1,5 +1,5 @@
 const connection = new signalR.HubConnectionBuilder()
-    .withUrl("http://topswagcodesignalr.azurewebsites.net/processHub")
+    .withUrl("https://topswagcodesignalr.azurewebsites.net/processHub")
     .build();
 
 connection.on("process", (progressValue) => {
