@@ -1,0 +1,73 @@
+---
+layout: page
+title: Tetris
+permalink: /tetris/
+---
+
+<form class="form-card">
+    <fieldset class="form-fieldset">
+        <legend class="form-legend">Tetris Wallpaper Generator</legend>
+        <div>
+            A small project I made because I wanted to change wallpaper on my PC. So I created this tool to create a Tetris themed wallpaper for any screen size. Needed it to be flexible I use a range of different screen resolutions. Eg. 4k, Ultrawidescreen and HD. So I wanted to create a different unique background for each screen.
+        </div>
+        <div class="form-element form-input">
+            <input id="widthInput" class="form-element-field" placeholder="Plesae fill in width in pixels" type="number" required value="500"/>
+            <div class="form-element-bar"></div>
+            <label class="form-element-label" for="widthInput">Width</label>
+        </div>
+        <div class="form-element form-input">
+            <input id="heightInput" class="form-element-field -hasvalue" placeholder="Please fill in height in pixels" type="number" required value="500" />
+            <div class="form-element-bar"></div>
+            <label class="form-element-label" for="heightInput">Height</label>
+        </div>
+        <div class="form-element form-select">
+            <select id="colorPicker" class="form-element-field">
+                <option disabled selected value="" class="form-select-placeholder"></option>
+                <option value="Default">Default</option>
+                <option value="Neon">Neon</option>
+                <option value="Dark">Dark</option>
+                <option value="Pink">Pink</option>
+                <option value="Blue">Blue</option>
+            </select>
+            <div class="form-element-bar"></div>
+            <label class="form-element-label" for="colorPicker">Select your color theme</label>
+        </div>
+        <div class="form-checkbox form-checkbox-inline">
+            
+            <label class="form-checkbox-label">
+                <input id="instantCheck" name=instant class="form-checkbox-field" type="checkbox" />
+                <i class="form-checkbox-button"></i>
+                <span>Instant</span>
+            </label>
+        </div>
+    </fieldset>
+    <div class="form-actions">
+        <button class="form-btn" type="button" onclick="buttonDownload(); return false;">Download</button>
+        <button class="form-btn-cancel -nooutline" type="button" onclick="playButtonClicked(); return false;">Create</button>
+    </div>
+</form>
+
+
+<script src='js/tetris.js'></script>
+<script>
+
+    function buttonDownload(){
+        var downloadCanvas = document.getElementById("testCanvas");
+        image = downloadCanvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
+        var link = document.createElement('a');
+        link.download = "TopSwagTetris.png";
+        link.href = image;
+        link.click();
+
+        return false;
+    }
+
+    var head = document.head;
+    var link = document.createElement("link");
+
+    link.type = "text/css";
+    link.rel = "stylesheet";
+    link.href = "style.css";
+
+    head.appendChild(link);
+</script>

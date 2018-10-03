@@ -13,3 +13,18 @@ connection.on("LogWork", (work) => {
 });
 
 connection.start().catch(err => console.error(err));
+
+connection.onclose(function () {
+    console.log("closing connection");
+    timeoutConnection();
+});
+
+function timeoutConnection(){
+    setTimeout(function(){ startConnection(); }, 3000);
+}
+
+function startConnection(){
+    connection.start().catch(err => timeoutConnection());
+}
+
+console.log("something new");
