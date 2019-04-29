@@ -1,5 +1,5 @@
 const connection = new signalR.HubConnectionBuilder()
-    .withUrl("https://topswagcodesignalr.azurewebsites.net/graphHub")
+    .withUrl("http://localhost:51133/graphHub")
     .build();
 
 connection.on("LogWork", (work) => {
@@ -27,4 +27,3 @@ function startConnection(){
     connection.start().catch(err => timeoutConnection());
 }
 
-console.log("something new");

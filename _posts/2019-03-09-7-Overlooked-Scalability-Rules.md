@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 6 Overlooked Scalability Rules
-date: 2019-03-06 21:00:00 +0200
+date: 2019-03-09 16:00:00 +0200
 ---
 
 This is the first blog post in a new series on tech books that I love. Two important points about these blog posts:
@@ -90,7 +90,7 @@ SELECT * FROM Customers
 or
 
 ```cs
-_efContext.Customer.Where( customer => customer.Id == id)
+_efContext.Customer.Where( customer => customer.IsActive == true)
 ```
 
 ## Do
