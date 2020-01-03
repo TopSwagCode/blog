@@ -1,0 +1,111 @@
+<footer class="site-footer h-card">
+  <data class="u-url" href="{{ "/" | relative_url }}"></data>
+
+  <div class="wrapper">
+
+    <!--<h2 class="footer-heading">{{ site.title | escape }}</h2>-->
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <img style="height: 100px;" src="/assets/banner-logo.png"></img>
+        <!--
+        <ul class="contact-list">
+          <li class="p-name">
+            {%- if site.author -%}
+              {{ site.author | escape }}
+            {%- else -%}
+              {{ site.title | escape }}
+            {%- endif -%}
+            </li>
+            {%- if site.email -%}
+            <li><a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+            {%- endif -%}
+        </ul>-->
+      </div>
+
+      <div class="footer-col footer-col-2">
+        {%- include social.html -%}
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>
+          Donate money if you love the blog. All donations will go to a charity of my choice.
+        </p>
+        <p>
+          <div style="display: inline-block">
+          <form id="payment1" action="https://kntm9qpdw9.execute-api.eu-west-1.amazonaws.com/prod/aaaaaaaaaaaaaaaaaaaaaa" method="POST" target="hiddenFrame">
+              <script
+                src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                data-key="pk_live_grlD1Jzx0XmQEf2Imsho41WX"
+                data-amount="499"
+                data-name="TopSwagCode"
+                data-description="TopSwagCode charity of choice"
+                data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+                data-locale="auto"
+                data-currency="usd"
+                data-name="TopSwagCode"
+                data-description="Support to TopSwagCode"
+                data-panel-label="Donate"
+                data-label="4.99$">
+              </script>
+              <input type="hidden" id="Amount" name="Amount" value="499">
+            </form>
+          </div>
+          <div style="display: inline-block">
+            <form id="payment2" action="https://kntm9qpdw9.execute-api.eu-west-1.amazonaws.com/prod/aaaaaaaaaaaaaaaaaaaaaa" method="POST" target="hiddenFrame">
+                <script
+                  src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                  data-key="pk_live_grlD1Jzx0XmQEf2Imsho41WX"
+                  data-amount="999"
+                  data-name="TopSwagCode"
+                  data-description="TopSwagCode charity of choice"
+                  data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+                  data-locale="auto"
+                  data-currency="usd"
+                  data-name="TopSwagCode"
+                  data-description="Support to TopSwagCode"
+                  data-panel-label="Donate"
+                  data-label="9.99$">
+                </script>
+                <input type="hidden" id="Amount" name="Amount" value="999">
+              </form>
+            </div>
+            <div style="display: inline-block">
+                <form id="payment1" action="https://kntm9qpdw9.execute-api.eu-west-1.amazonaws.com/prod/aaaaaaaaaaaaaaaaaaaaaa" method="POST" target="hiddenFrame">
+                    <script
+                      src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                      data-key="pk_live_grlD1Jzx0XmQEf2Imsho41WX"
+                      data-amount="1499"
+                      data-name="TopSwagCode"
+                      data-description="TopSwagCode charity of choice"
+                      data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+                      data-locale="auto"
+                      data-currency="usd"
+                      data-name="TopSwagCode"
+                      data-description="Support to TopSwagCode"
+                      data-panel-label="Donate"
+                      data-label="14.99$">
+                    </script>
+                    <input type="hidden" id="Amount" name="Amount" value="499">
+                  </form>
+                </div>
+          </p>
+        <!--<p>{{- site.description | escape -}}</p>-->
+      </div>
+    </div>
+
+  </div>
+
+<iframe id="hiddenFrame" name="hiddenFrame" width="0" height="0" border="0" style="display: none;"></iframe>
+
+<script>
+  (function() {
+    document.getElementById("hiddenFrame").onload = function() {
+      if(document.getElementById("hiddenFrame").contentDocument == null){
+        alert('Thank you for donating.');
+      }
+    };
+  })();
+</script>
+
+</footer>
