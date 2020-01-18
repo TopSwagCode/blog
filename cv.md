@@ -14,14 +14,15 @@ Born: 17/02/1987
      
 
 # Work
-* 2016 - now: First Agenda
+* 2019 - Now: Brølstærk
+* 2016 - 2019: First Agenda
 * 2016: Wallmob
 * 2014-2016: Stibo
 * 2014 : Ebay / bilinfo.net (Internship + Bachelor assignment.)
 * 2011-2013 : Novicell (Startet as intern and had my AP assignment here and afterwards hired fulltime)    
+* 2003-2006 : Fjord Line (Checkin Employee)
 
 # School
-* 2003-2006 : Fjord Line (Checkin Employee)
 * 2012-2014 : Bachelor in Software development at Business Academy Aarhus
 * 2008-2011 : AP in Software development at Business Academy Aarhus
 * 2006-2007 : Computer Science at Århus university (Not completd)
@@ -35,10 +36,11 @@ Born: 17/02/1987
 * Development of Kosan Gas webshop, and associated business logic matrix.
 * Getting Stibo to change to jMeter saving them alot of money and making performance more easy to approach, by persiting in talking about it and making demo's of it in my spare time.
 * Creating a new Microservice overnight in spare time, to implement wished feature that users had asked for, but had not been prioritized. Showing that going over to microservices let us work more agile and create new services without interfering with prior code base. All code and deployment setup complete during one night of coding.  
+* Reducing page load time from minutes to few seconds and at the same time reducing response size from 10mb to 90kb while keeping all the same data. This was achieved by going from SQL database to timeseries database and going from a flat response model to tree model removing duplicate data. 
 
 # Skills
 C#, ASP.NET, Dotnet Core, Docker, MSMQ, SQS, Razor, Entity Framework, NHibernate. SQL, Java, HTML5, JavaScript, CSS.
-Eclipse Visual Studio Microsoft SQL Server 2005 / 2008 Microsoft Test Manager, TConfig, CTE XL, Jira, Azure, AWS.
+Eclipse, Visual Studio, Microsoft SQL Server 2005 / 2008, VictoriaMetrics, Microsoft Test Manager, TConfig, CTE XL, Jira, Azure, AWS.
 
 # Buzz words    
 Scrum, eXtreme Programming, Agile, Test Driven Development, CI CD, lean managment / development Testing (Pairwise, Exploratory / tours) SOA, MVC
