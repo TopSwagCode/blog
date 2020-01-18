@@ -11,6 +11,7 @@ A few things describing me:
 * Wannabe blogger :D
 * Table top gamer.
 * Loving boyfriend.
+* Loving father.
 * Cat and dog owner.
 
 Going more in depth. I love to code. I love to learn and improve. Being that design patterns or new tech. That is why I attend meetups, hackathons and the sorts. This is also kind of the reason why I wanted to take up blogging. Sharing the awesome stuff I found. I have tried a couple of times and failed. Used to much time on "What plugins should I try?", "What design / Theme do I want?", "What do I want to blog about?" and so on. When I should simply just have made alot of small blog posts about what I had been looking on that week.
