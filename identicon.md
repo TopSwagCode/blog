@@ -15,14 +15,13 @@ Try to create your own below here:
 <input id="inputSrc" placeholder="Type some text here" type="text" oninput="myFunction()"/>
 <br/>
 
-<img id="test" src="http://topswagcodewebapiidenicon20180904095437.azurewebsites.net/api/idenicon?name=ina&size=200">
+<img id="test" src="https://localhost:5001/api/Identicon/topswagcode">
 
 
 <script> 
 function myFunction(){
-    var link = "http://topswagcodewebapiidenicon20180904095437.azurewebsites.net/api/idenicon?name=";
-    var after = "&size=200";
-    document.getElementById('test').src = link+document.getElementById('inputSrc').value+after;
+    var link = "https://localhost:5001/api/Identicon/";
+    document.getElementById('test').src = link+document.getElementById('inputSrc').value;
 } 
 </script>
 

@@ -150,3 +150,5 @@ Server side code can be found <a href="https://github.com/kiksen1987/TopSwagCode
 And the client side code can be found <a href="https://github.com/kiksen1987/blog/tree/master/assets/js" target="_blank">here.</a>
 
 Hoped you liked the blog post and got some nice ideas to improve your projects with WebSockets.
+
+<iframe src="/stocks" style="width: 185px; height: 285px;" frameBorder="0"></iframe>

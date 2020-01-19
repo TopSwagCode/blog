@@ -1,9 +1,11 @@
 const connection = new signalR.HubConnectionBuilder()
-    .withUrl("http://localhost:51133/stockHub")
+    .withUrl("http://localhost:5000/stockHub")
     .build();
 
 connection.on("UpdateStocks", (stocksJson) => {
     var stocks = JSON.parse(stocksJson);
+    console.log(stocks);
+    console.log("Teststs")
     stocks.forEach(stock => {
         updateStock(stock);
     });

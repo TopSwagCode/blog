@@ -15,21 +15,21 @@ You can try to create one for your self below here:
 <input id="inputSrc" placeholder="Type some text here" type="text" oninput="myFunction()"/>
 <br/>
 
-<img id="identiconImg" src="http://topswagcodewebapiidenicon20180904095437.azurewebsites.net/api/idenicon?name=ina&size=200">
+<img id="identiconImg" src="https://localhost:5001/api/Identicon/fasdas">
 
 
 <script> 
 function myFunction(){
-    var link = "http://topswagcodewebapiidenicon20180904095437.azurewebsites.net/api/idenicon?name=";
+    var link = "https://localhost:5001/api/Identicon/";
     var after = "&size=200";
-    document.getElementById('identiconImg').src = link+document.getElementById('inputSrc').value+after;
+    document.getElementById('identiconImg').src = link+document.getElementById('inputSrc').value;
 } 
 </script>
 
 </div>
 You can even call the service directly here:
 
-[http://topswagcodewebapiidenicon20180904095437.azurewebsites.net/api/idenicon?name=YourName&size=200](http://topswagcodewebapiidenicon20180904095437.azurewebsites.net/api/idenicon?name=YourName&size=200)
+[http://topswagcodewebapiidenicon20180904095437.azurewebsites.net/api/identicon?name=YourName&size=200](http://topswagcodewebapiidenicon20180904095437.azurewebsites.net/api/idenicon?name=YourName&size=200)
 
 Warning. This URL will change in the future to be something more nice eg. api.topswagcode.com/identicon which will be a long lasting API endpoint. This endpoint is just a quick prototype.
 
