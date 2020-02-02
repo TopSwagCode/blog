@@ -1,5 +1,5 @@
 const connection = new signalR.HubConnectionBuilder()
-    .withUrl("http://localhost:5000/chatHub")
+    .withUrl("http://3.121.86.217/chatHub")
     .build();
 
 connection.on("ReceiveMessage", (user, message) => { 

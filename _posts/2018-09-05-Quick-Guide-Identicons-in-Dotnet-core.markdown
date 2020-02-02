@@ -15,12 +15,12 @@ You can try to create one for your self below here:
 <input id="inputSrc" placeholder="Type some text here" type="text" oninput="myFunction()"/>
 <br/>
 
-<img id="identiconImg" src="https://localhost:5001/api/Identicon/fasdas">
+<img id="identiconImg" src="http://3.121.86.217/api/Identicon/storm">
 
 
 <script> 
 function myFunction(){
-    var link = "https://localhost:5001/api/Identicon/";
+    var link = "http://3.121.86.217/api/Identicon/";
     var after = "&size=200";
     document.getElementById('identiconImg').src = link+document.getElementById('inputSrc').value;
 } 
@@ -29,7 +29,7 @@ function myFunction(){
 </div>
 You can even call the service directly here:
 
-[http://topswagcodewebapiidenicon20180904095437.azurewebsites.net/api/identicon?name=YourName&size=200](http://topswagcodewebapiidenicon20180904095437.azurewebsites.net/api/idenicon?name=YourName&size=200)
+[https://3.121.86.217/api/Identicon/storm](https://3.121.86.217/api/Identicon/{SomeName})
 
 Warning. This URL will change in the future to be something more nice eg. api.topswagcode.com/identicon which will be a long lasting API endpoint. This endpoint is just a quick prototype.
 
@@ -57,7 +57,7 @@ To create your own Identicon service. Add "Jdenticon.AspNetCore" nuget package t
     }
 ```
 
-The code to the service can be found on github [here](https://github.com/kiksen1987/TopSwagCode.WebApi.Identicon);
+The code to the service can be found on github [here](https://github.com/topswagcode/TopSwagCode.WebApi.Identicon);
 
 If you want to know more about the creator of the nuget package look here: [https://jdenticon.com/](https://jdenticon.com/).
 They also have some samples for creating identicons usings JavaScript or PHP.
