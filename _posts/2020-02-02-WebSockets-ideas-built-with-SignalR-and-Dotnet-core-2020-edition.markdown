@@ -1,9 +1,9 @@
 ---
 layout: post
 title:  "WebSocket ideas built with SignalR and Dotnet core 2020 edition"
-date:   2020-01-19 14:00:00 +0100
+date:   2020-02-02 14:00:00 +0100
 ---
-This is a remake of a post I made ~2 years ago. Some stuff has changed since and I had some ideas for improvements. I am doing this post because every now and then I see people asking, what they can use websockets for, besides a simple chat app. For the people out there, that don't know websockets. It's a way for communicating between client and server, while keeping an open connection. This means we don't have to poll the server for updates and make unwished load and also means we don't have to make new Http handshakes all the time.
+This is a draft and a remake of a post I made ~2 years ago. Some stuff has changed since and I had some ideas for improvements. I am doing this post because every now and then I see people asking, what they can use websockets for, besides a simple chat app. For the people out there, that don't know websockets. It's a way for communicating between client and server, while keeping an open connection. This means we don't have to poll the server for updates and make unwished load and also means we don't have to make new Http handshakes all the time.
 
 To start off with, I won't go to much into sexy little details, instead I will just show some use cases where you could use websockets in your app today. At the end of the post I will share code samples, showing how I wired things up.
 
