@@ -1,5 +1,5 @@
 const connection = new signalR.HubConnectionBuilder()
-    .withUrl("http://http://3.121.86.217/stockHub")
+    .withUrl("http://3.121.86.217/stockHub")
     .build();
 
 connection.on("UpdateStocks", (stocksJson) => {
