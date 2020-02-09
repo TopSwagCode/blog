@@ -1,5 +1,5 @@
 const connection = new signalR.HubConnectionBuilder()
-    .withUrl("http://3.121.86.217/graphHub")
+    .withUrl("https://a1ee4767.ngrok.io/graphHub")
     .build();
 
 connection.on("LogWork", (work) => {
