@@ -1,5 +1,5 @@
 const connection = new signalR.HubConnectionBuilder()
-    .withUrl("http://3.121.86.217/processHub")
+    .withUrl("https://topswagcode.dev/processHub")
     .build();
 
 connection.on("process", (progressValue) => {
