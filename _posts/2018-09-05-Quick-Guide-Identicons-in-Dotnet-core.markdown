@@ -15,12 +15,12 @@ You can try to create one for your self below here:
 <input id="inputSrc" placeholder="Type some text here" type="text" oninput="myFunction()"/>
 <br/>
 
-<img id="identiconImg" src="https://topswagcode.dev/api/Identicon/storm">
+<img id="identiconImg" src="https://fqz04mg9a6.execute-api.eu-west-1.amazonaws.com/Prod/api/identicon/storm">
 
 
 <script> 
 function myFunction(){
-    var link = "https://topswagcode.dev/api/Identicon/";
+    var link = "https://fqz04mg9a6.execute-api.eu-west-1.amazonaws.com/Prod/api/identicon/";
     var after = "&size=200";
     document.getElementById('identiconImg').src = link+document.getElementById('inputSrc').value;
 } 
@@ -29,7 +29,7 @@ function myFunction(){
 </div>
 You can even call the service directly here:
 
-[https://topswagcode.dev/api/Identicon/storm](https://topswagcode.dev/api/Identicon/{SomeName})
+[https://fqz04mg9a6.execute-api.eu-west-1.amazonaws.com/Prod/api/identicon/storm](https://fqz04mg9a6.execute-api.eu-west-1.amazonaws.com/Prod/api/identicon/{SomeName})
 
 
 To create your own Identicon service. Add "Jdenticon.AspNetCore" nuget package to your project and create a api controller like the one in this project. The code can also be seen below here:
