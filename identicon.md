@@ -15,12 +15,12 @@ Try to create your own below here:
 <input id="inputSrc" placeholder="Type some text here" type="text" oninput="myFunction()"/>
 <br/>
 
-<img id="test" src="https://topswagcode.dev/api/Identicon/storm">
+<img id="test" src="https://fqz04mg9a6.execute-api.eu-west-1.amazonaws.com/Prod/api/identicon/storm">
 
 
 <script> 
 function myFunction(){
-    var link = "https://topswagcode.dev/api/Identicon/";
+    var link = "https://fqz04mg9a6.execute-api.eu-west-1.amazonaws.com/Prod/api/identicon/";
     document.getElementById('test').src = link+document.getElementById('inputSrc').value;
 } 
 </script>
@@ -28,7 +28,7 @@ function myFunction(){
 </div>
 If you want to try out the service the URL can be found here:
 
-<a href="https://topswagcode.dev/api/Identicon/Storm">https://topswagcode.dev/api/Identicon/{YourName}</a>
+<a href="https://topswagcode.dev/api/Identicon/Storm">https://fqz04mg9a6.execute-api.eu-west-1.amazonaws.com/Prod/api/identicon/{YourName}</a>
 
 The code to the service can be found here:
 
