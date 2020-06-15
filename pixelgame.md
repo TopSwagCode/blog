@@ -10,15 +10,15 @@ Working on a small Pixel game in my spare time. I will be updating this page wit
 
 Preview Idle animations:
 
-![idle](assets/idle.gif)
+![idle](/assets/idle.gif)
 
 Preview Idle animations:
 
-![ocean](assets/ocean.gif)
+![ocean](/assets/ocean.gif)
 
 Preview Island animations:
 
-![island](assets/Island.gif)
+![island](/assets/Island.gif)
 
 # Roadmap
 
