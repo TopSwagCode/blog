@@ -20,6 +20,10 @@ Preview Island animations:
 
 ![island](/assets/Island.gif)
 
+Preview Zoom animations:
+
+![Zoom](/assets/zoom.gif)
+
 # Roadmap
 
 * Create helper tools (Create maps and so on.)
