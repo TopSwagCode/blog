@@ -24,6 +24,9 @@ Preview Camera Movement:
 
 ![CameraMovement](/assets/CameraMovement.gif)
 
+Preview Zoom animations:
+
+
 
 # Roadmap
 
