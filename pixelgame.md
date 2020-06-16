@@ -20,11 +20,13 @@ Preview Island animations:
 
 ![island](/assets/Island.gif)
 
+Preview Zoom animations:
+
+![Zoom](/assets/zoom.gif)
+
 Preview Camera Movement:
 
 ![CameraMovement](/assets/CameraMovement.gif)
-
-Preview Zoom animations:
 
 
 
