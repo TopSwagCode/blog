@@ -28,6 +28,15 @@ Preview Camera Movement:
 
 ![CameraMovement](/assets/CameraMovement.gif)
 
+Preview Biomes:
+
+![CameraMovement](/assets/Biomes.gif)
+
+Preview Unit Placement:
+
+![CameraMovement](/assets/UnitPlacement.gif)
+
+
 
 
 # Roadmap
