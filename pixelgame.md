@@ -30,11 +30,11 @@ Preview Camera Movement:
 
 Preview Biomes:
 
-![CameraMovement](/assets/Biomes.gif)
+![Biomes](/assets/Biomes.gif)
 
 Preview Unit Placement:
 
-![CameraMovement](/assets/UnitPlacement.gif)
+![UnitPlacement](/assets/UnitPlacement.gif)
 
 
 
