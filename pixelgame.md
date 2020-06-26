@@ -44,4 +44,4 @@ Preview CI/CD pipeline with Github actions:
 
 Preview Unit Placement improved:
 
-![UnitPlacement](/assets/UnitPlacement.gif)
+![UnitPlacementPlus](/assets/UnitPlacementPlus.gif)
