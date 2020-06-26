@@ -4,7 +4,9 @@ title: Pixel game
 permalink: /PixelGame/
 ---
 
-Working on a small Pixel game in my spare time. I will be updating this page with previews of the progress and the roadmap as ideas pop up.
+Working on a small Pixel game in my spare time. I will be updating this page with previews of the progress. You can download alpha build version of the game here: [http://help-motivate.me/Tiny4X.Windows.zip](http://help-motivate.me/Tiny4X.Windows.zip)
+
+You can find my Trello board to see upcoming feature here: [https://trello.com/b/hblZjlMr/topswagcodepixelgame](https://trello.com/b/hblZjlMr/topswagcodepixelgame)
 
 # Preview
 
@@ -36,13 +38,10 @@ Preview Unit Placement:
 
 ![UnitPlacement](/assets/UnitPlacement.gif)
 
+Preview CI/CD pipeline with Github actions:
 
+![buildmono](/assets/buildmono.png)
 
+Preview Unit Placement improved:
 
-# Roadmap
-
-* Create helper tools (Create maps and so on.)
-* More coming soon. Just getting started :D
-* Add buildings
-* Add trees / Mountains and more biomes
-* Start building game logic :D
+![UnitPlacement](/assets/UnitPlacement.gif)
