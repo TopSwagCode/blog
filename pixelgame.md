@@ -44,4 +44,12 @@ Preview CI/CD pipeline with Github actions:
 
 Preview Unit Placement improved:
 
-![UnitPlacement](/assets/UnitPlacement.gif)
+![UnitPlacement](/assets/UnitPlacementPlus.gif)
+
+Preview Borders:
+
+![GameBorders](/assets/Borders.gif)
+
+Preview Text:
+
+![Text](/assets/font.png)
