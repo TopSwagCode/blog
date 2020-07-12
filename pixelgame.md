@@ -44,7 +44,6 @@ Preview CI/CD pipeline with Github actions:
 
 Preview Unit Placement improved:
 
-<<<<<<< HEAD
 ![UnitPlacement](/assets/UnitPlacementPlus.gif)
 
 Preview Borders:
@@ -54,6 +53,3 @@ Preview Borders:
 Preview Text:
 
 ![Text](/assets/font.png)
-=======
-![UnitPlacementPlus](/assets/UnitPlacementPlus.gif)
->>>>>>> 028c6ae833d319746455e851e33d98d9bdc97c7d
