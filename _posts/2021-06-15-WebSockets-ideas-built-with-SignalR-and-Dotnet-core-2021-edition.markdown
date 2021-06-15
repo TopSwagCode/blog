@@ -1,26 +1,26 @@
 ---
 layout: post
-title:  "WebSocket ideas built with SignalR and Dotnet core 2020 edition"
-date:   2020-02-02 14:00:00 +0100
+title:  "WebSocket ideas built with SignalR and Dotnet core 2021 edition"
+date:   2021-06-15 14:00:00 +0100
 ---
 This is a draft and a remake of a post I made ~2 years ago. Some stuff has changed since and I had some ideas for improvements. I am doing this post because every now and then I see people asking, what they can use websockets for, besides a simple chat app. For the people out there, that don't know websockets. It's a way for communicating between client and server, while keeping an open connection. This means we don't have to poll the server for updates and make unwished load and also means we don't have to make new Http handshakes all the time.
 
 To start off with, I won't go to much into sexy little details, instead I will just show some use cases where you could use websockets in your app today. At the end of the post I will share code samples, showing how I wired things up.
 
 ### Admin site Graph
-<iframe src="/graph" style="width: 450px; height: 250px;" frameBorder="0"></iframe>
+<iframe src="https://app.topswagcode.com/graph" style="width: 450px; height: 250px;" frameBorder="0"></iframe>
 
 The Admin site graph Server to Client communication. You might have an internal admin site with all kind of dashboards. Being it sales or throughput of processed documents. It really could be any kind of dashboard you have hanging in your office. Why not use websockets to make it real time? See when a sale has been done. See how many messages that get processed each minute or even keep track over time. The sample I built is just sending random numbers from the server between 0 and 100. 
 
 ### Stock market
 
-<iframe src="/stocks" style="width: 185px; height: 285px;" frameBorder="0"></iframe>
+<iframe src="https://app.topswagcode.com/stock" style="width: 185px; height: 285px;" frameBorder="0"></iframe>
 
 You could also use it for showing stock market prices and updating the prices one by one. This would save you from reloading the entire screen or polling all the stocks all the time. This is similar to the admin site graph, just updating different stocks.
 
 ### Personal processing updates
 
-<iframe src="/processing" style="width: 500; height: 120px;" frameBorder="0"></iframe>
+<iframe src="https://app.topswagcode.com/processing" style="width: 500; height: 120px;" frameBorder="0"></iframe>
 
 This is when a users ask for some task to be completed but the time is unknown and taking more than a couple of seconds. I have seen plenty of implementations of this without using websockets. Eg. Sending a email to the user when the task is done. Or simply just polling the server if the content is ready.
 
@@ -29,7 +29,7 @@ But we can make it even more fancy by using websockets. We could save that users
 My example is just a fake process running in background and sending out updates until reaching 100%. Then waiting a small duration and sending process done with the URL for the download.
 
 ### Chat
-<iframe src="/chat" style="width: 500px; height: 500px;" frameBorder="1"></iframe>
+<iframe src="https://app.topswagcode.com/" style="width: 500px; height: 500px;" frameBorder="1"></iframe>
 
 We might aswell include the app that has been built a million times. The chat app makes a ton of sense to built using websockets. It's an app that quickly can grow out of hand and make a lot of load on your server if used with polling. But by using websockets it is a lot easier. You don't need to keep track of which users received what messages when they poll for new messages. Instead every time a user sends a chat message to the server, the server then broadcast the chat message out to all users, giving that realtime feel.
 
